@@ -116,7 +116,7 @@ function App() {
             transition={{ duration: 0.8 }}
             className="text-4xl md:text-6xl font-bold mb-6"
           >
-            Soluções Tecnológicas do Futuro
+            Soluções Tecnológicas para o seu Negócio
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
