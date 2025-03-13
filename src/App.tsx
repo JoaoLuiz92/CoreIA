@@ -268,7 +268,7 @@ function App() {
           <a href="mailto:" className="hover:underline">
           <Mail className="h-10 w-10 text-blue-400" />
           </a>
-          <span>jluizdarosajr@gmail.com</span>
+          <span>techcoreia@gmail.com</span>
         </div>
         <div className="flex items-center space-x-4">
           <Linkedin className="h-10 w-10 text-blue-400" />
