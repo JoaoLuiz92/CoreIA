@@ -259,20 +259,20 @@ function App() {
     <div className="flex flex-col md:flex-row gap-2">
       <div className="space-y-4 flex-1 pl-6">
         <div className="flex items-center space-x-4">
-            <a href="https://wa.me/5553999037382" className="hover:underline" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/5553999037382" className="flex items-center space-x-4" target="_blank" rel="noopener noreferrer">
             <Phone className="h-10 w-10 text-blue-400" />
             <span>(53) 99903-7382</span>
             </a>
         </div>
         <div className="flex items-center space-x-4">
-          <a href="mailto:" className="hover:underline">
+          <a href="mailto:" className="flex items-center space-x-4" target="_blank" rel="noopener noreferrer ">
           <Mail className="h-10 w-10 text-blue-400" />
           <span>techcoreia@gmail.com</span>
           </a>
         </div>
         <div className="flex items-center space-x-4">
           <Linkedin className="h-10 w-10 text-blue-400" />
-          <a href="https://www.linkedin.com/in/joaoluiz92/" target="_blank" rel="noopener noreferrer" className="hover:underline">
+          <a href="https://www.linkedin.com/in/joaoluiz92/" target="_blank" rel="noopener noreferrer" >
             LinkedIn
           </a>
         </div>
