@@ -261,14 +261,14 @@ function App() {
         <div className="flex items-center space-x-4">
             <a href="https://wa.me/5553999037382" className="hover:underline" target="_blank" rel="noopener noreferrer">
             <Phone className="h-10 w-10 text-blue-400" />
+            <span>(53) 99903-7382</span>
             </a>
-          <span>(53) 99903-7382</span>
         </div>
         <div className="flex items-center space-x-4">
           <a href="mailto:" className="hover:underline">
           <Mail className="h-10 w-10 text-blue-400" />
-          </a>
           <span>techcoreia@gmail.com</span>
+          </a>
         </div>
         <div className="flex items-center space-x-4">
           <Linkedin className="h-10 w-10 text-blue-400" />
