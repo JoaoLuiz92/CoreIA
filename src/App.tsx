@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import React from 'react';
 import { useForm, ValidationError } from '@formspree/react';
 import { useInView } from 'react-intersection-observer';
-import { Brain, Code, Layout, Bot, MessageSquare, Users, Building, BarChart as ChartBar, Rocket, Shield, Globe, Workflow } from 'lucide-react';
+import { Brain, Code, Layout, Bot, MessageSquare, Users, Building, BarChart as ChartBar, Rocket, Shield, Globe, Workflow,Phone,Linkedin,Mail } from 'lucide-react';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import joao from './public/img/joao.png';
@@ -248,81 +248,94 @@ function App() {
         </div>
       </section>
 
-      {/* Contact Section */}
       <section id="contato" className="py-20 bg-gradient-to-b from-black to-gray-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Entre em Contato</h2>
-            <p className="text-gray-300 text-lg">
-              Vamos transformar sua empresa juntos
-            </p>
-          </div>
-          
-          <div className="max-w-lg mx-auto">
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-              <input
-                type="text"
-                name="name"
-                placeholder="Nome"
-                className="w-full px-4 py-3 bg-gray-800/50 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
-              />
-              </div>
-              <div>
-              <input
-                type="phone"
-                name="phone"
-                placeholder="Telefone/Whatsapp"
-                className="w-full px-4 py-3 bg-gray-800/50 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
-              />
-              <ValidationError 
-                prefix="Email" 
-                field="email"
-                errors={state.errors}
-              />
-              </div>
-              <div>
-              <input
-                type="email"
-                name="email"
-                placeholder="Email"
-                className="w-full px-4 py-3 bg-gray-800/50 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
-              />
-              <ValidationError 
-                prefix="Email" 
-                field="email"
-                errors={state.errors}
-              />
-              </div>
-              <div>
-              <textarea
-                name="message"
-                placeholder="Mensagem"
-                rows={4}
-                className="w-full px-4 py-3 bg-gray-800/50 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
-              ></textarea>
-              <ValidationError 
-                prefix="Message" 
-                field="message"
-                errors={state.errors}
-              />
-              </div>
-              <button
-              type="submit"
-              disabled={state.submitting}
-              className="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
-              >
-              Enviar Mensagem
-              </button>
-              {state.succeeded && <p className="text-green-500 mt-4">Obrigado por entrar em contato!</p>}
-            </form>
-          </div>
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="text-center mb-16">
+      <h2 className="text-3xl md:text-4xl font-bold mb-6">Entre em Contato</h2>
+      <p className="text-gray-300 text-lg">
+        Vamos transformar sua empresa juntos
+      </p>
+    </div>
+    <div className="flex flex-col md:flex-row gap-2">
+      <div className="space-y-4 flex-1 pl-6">
+        <div className="flex items-center space-x-4">
+            <a href="https://wa.me/5553999037382" className="hover:underline" target="_blank" rel="noopener noreferrer">
+            <Phone className="h-10 w-10 text-blue-400" />
+            </a>
+          <span>(53) 99903-7382</span>
         </div>
-      </section>
-              
+        <div className="flex items-center space-x-4">
+          <a href="mailto:" className="hover:underline">
+          <Mail className="h-10 w-10 text-blue-400" />
+          </a>
+          <span>jluizdarosajr@gmail.com</span>
+        </div>
+        <div className="flex items-center space-x-4">
+          <Linkedin className="h-10 w-10 text-blue-400" />
+          <a href="https://www.linkedin.com/in/joaoluiz92/" target="_blank" rel="noopener noreferrer" className="hover:underline">
+            LinkedIn
+          </a>
+        </div>
+      </div>
+      <div className="flex-1">
+        <form onSubmit={handleSubmit} className="space-y-6">
+          <div>
+            <input
+              type="text"
+              name="name"
+              placeholder="Nome"
+              className="w-full px-4 py-3 bg-gray-800/50 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+            />
+          </div>
+          <div>
+            <input
+              type="phone"
+              name="phone"
+              placeholder="Telefone/Whatsapp"
+              className="w-full px-4 py-3 bg-gray-800/50 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+            />
+          </div>
+          <div>
+            <input
+              type="email"
+              name="email"
+              placeholder="Email"
+              className="w-full px-4 py-3 bg-gray-800/50 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+            />
+            <ValidationError 
+              prefix="Email" 
+              field="email"
+              errors={state.errors}
+            />
+          </div>
+          <div>
+            <textarea
+              name="message"
+              placeholder="Mensagem"
+              rows={4}
+              className="w-full px-4 py-3 bg-gray-800/50 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+            ></textarea>
+            <ValidationError 
+              prefix="Message" 
+              field="message"
+              errors={state.errors}
+            />
+          </div>
+          <button
+            type="submit"
+            disabled={state.submitting}
+            className="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
+          >
+            Enviar Mensagem
+          </button>
+          {state.succeeded && <p className="text-white-500 mt-4 font-bold">Obrigado por enviar sua mensagem. Entraremos em contato !</p>}
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
       <Footer />
     </div>
   );
 }
-
 export default App;
